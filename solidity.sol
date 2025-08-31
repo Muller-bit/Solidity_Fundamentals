@@ -62,12 +62,17 @@ contract ValueTypeExample {
         b = 10; // Changing b does not affect a
         // a is still 5, b is now 10
 
+        /*List of the Refence types
+        string public message = "welcome";  ---> string
+        uint256 public[] scores =[1,2,3,4];--->array
+        mapping(address => untin256)public balances; i.e key-value pairs, dictionary --->mapping
 
-        //Refence type
-        //string public message = "welcome";  ---> string
-        //uint256 public[] scores =[1,2,3,4];--->array
-        //mapping(address => untin256)public balances; i.e key-value pairs, dictionary
-        
+        struct Person(){
+        string name:"Mullyer";
+        uint256 age:30;
+        address wallet:0x1234567890123456789012345678901234567890;
+        }
+        --->struct i.e custom grouping the related  data 
+*/
     }
-  
 }
