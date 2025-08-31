@@ -21,3 +21,16 @@ contract TokenContract {
     address public constant DEAD_ADDRESS =
         0x000000000000000000000000000000000000dEaD;
 }
+//Immutable variables
+//Immutable Variables: Variables marked as immutable can be assigned only once, but this assignment can happen in the constructor:
+contract TokenDeployer {
+    // Declared but not assigned yet
+    address public immutable deployer;
+    uint256 public immutable deploymentTime;
+
+    constructor() {
+        // Assigned once in the constructor
+        deployer = msg.sender;
+        deploymentTime = block.timestamp;
+    }
+}
