@@ -76,3 +76,30 @@ contract ValueTypeExample {
 */
     }
 }
+contract RefenceTypeExample {
+    // Conceptual example in Solidity-like pseudocode
+    /*Declare and initialize an array in storage (blockchain permanent memory)
+array storageArray = [1, 2, 3];  original array in storage
+
+// Create a pointer to the storage array
+// This doesn't copy the data, it just creates a reference to the same storage location
+array storagePointer = storageArray; // points to the same data
+
+// Modify the array through the pointer
+storagePointer[0] = 100; // changes the actual storage array
+
+// At this point:
+// storageArray is [100, 2, 3]  (it was_changed !)
+
+// Create a memory copy of the storage array
+// This copies the entire array to a new location in temporary memory
+array memoryCopy = copy of storageArray; // memoryCopy is [100, 2, 3]
+
+// Modify the memory copy
+memoryCopy[1] = 200; // only changes the copy, not the original
+
+// Final result:
+// storageArray is [100, 2, 3]  (unchanged by memory modifications)
+/* memoryCopy is [100, 200, 3]  (modified locally)
+*/
+}
