@@ -27,7 +27,7 @@ contract TokenDeployer {
     // Declared but not assigned yet
     address public immutable deployer;
     uint256 public immutable deploymentTime;
-
+    //constructor function runs once when the contract is deployed,its just special function
     constructor() {
         // Assigned once in the constructor
         deployer = msg.sender;
