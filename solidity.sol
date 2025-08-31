@@ -34,3 +34,17 @@ contract TokenDeployer {
         deploymentTime = block.timestamp;
     }
 }
+//Data Types in Solidity , value types and reference types
+/*// Let's say we create a variable with a value:
+uint a = 5;
+​// When we assign it to another variable:
+uint b = a;
+​
+// Now b has its own copy of the value 5
+​
+// If we change b:
+b = 10;
+​
+// The value of a still remains 5
+// The value of b is now 10
+*/
