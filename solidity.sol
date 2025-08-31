@@ -61,5 +61,13 @@ contract ValueTypeExample {
         uint256 b = a; // b gets a copy of a's value
         b = 10; // Changing b does not affect a
         // a is still 5, b is now 10
+
+
+        //Refence type
+        //string public message = "welcome";  ---> string
+        //uint256 public[] scores =[1,2,3,4];--->array
+        //mapping(address => untin256)public balances; i.e key-value pairs, dictionary
+        
     }
+  
 }
