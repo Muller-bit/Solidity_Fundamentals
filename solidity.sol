@@ -48,3 +48,18 @@ b = 10;
 // The value of a still remains 5
 // The value of b is now 10
 */
+contract ValueTypeExample {
+    uint256 public score = 100; //uint no decimals, only positive whole numbers
+    int256 public temperature = -5;
+    bool public isComplete = false;
+    address public contractCreator = 0x1234567890123456789012345678901234567890;
+    bytes32 public dataHash =
+        0xabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcd;
+
+    function demonstrateValueTypes() external pure {
+        uint256 a = 5; // Original variable
+        uint256 b = a; // b gets a copy of a's value
+        b = 10; // Changing b does not affect a
+        // a is still 5, b is now 10
+    }
+}
