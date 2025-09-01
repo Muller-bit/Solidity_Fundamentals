@@ -130,5 +130,7 @@ contract PointerExample {
 contract StorageLocation {
     // State variable - stored in storage
     uint256[] permanentArray;
-    function processArray(uint256[] calldata inputValues) external {}
+    function processArray(uint256[] calldata inputValues) external {
+        // 'inputValues' exists in calldata - can't be modified
+    }
 }
