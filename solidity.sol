@@ -107,27 +107,28 @@ memoryCopy[1] = 200; // only changes the copy, not the original
 contract PointerExample {
     // State array in storage
     uint256[] public storageArray = [1, 2, 3];
-    
+
     function manipulateArray() public {
         // This creates a pointer to the storage array
         uint256[] storage storageArrayPointer = storageArray;
-        
+
         // This modifies the actual storage array through the pointer
         storageArrayPointer[0] = 100;
-        
+
         // At this point, storageArray is now [100, 2, 3]
-        
+
         // This creates a copy in memory, not a pointer to storage
         uint256[] memory memoryArray = storageArray;
-        
+
         // This modifies only the memory copy, not the storage array
         memoryArray[1] = 200;
-        
+
         // At this point, storageArray is still [100, 2, 3]
         // and memoryArray is [100, 200, 3]
     }
-    contract StorageLocation{
-        // State variable - stored in storage
-         uint256[]  permanentArray;
-    }
+}
+contract StorageLocation {
+    // State variable - stored in storage
+    uint256[] permanentArray;
+    function processArray(uint256[] calldata inputValues) external {}
 }
