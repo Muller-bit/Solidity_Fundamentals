@@ -133,5 +133,7 @@ contract StorageLocation {
     function processArray(uint256[] calldata inputValues) external {
         // 'inputValues' exists in calldata - can't be modified
         // Local variable in memory - temporary copy
+
+        uint256[] memory tempArray = new uint256[](inputValues.length);
     }
 }
