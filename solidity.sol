@@ -138,5 +138,7 @@ contract StorageLocation {
         for (uint i = 0; i < inputValues.length; i++) {
             tempArray[i] = inputValues[i] * 2;
         }
+        // Reference to storage - changes will persist
+        uint256[] storage myStorageArray = permanentArray;
     }
 }
