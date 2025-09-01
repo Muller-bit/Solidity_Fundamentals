@@ -140,5 +140,6 @@ contract StorageLocation {
         }
         // Reference to storage - changes will persist
         uint256[] storage myStorageArray = permanentArray;
+        myStorageArray.push(tempArray[0]); // This updates the blockchain state
     }
 }
