@@ -145,4 +145,5 @@ contract StorageLocation {
 }
 contract Counter {
     uint256 public count = 0;
+    // This function increases the count by 1
 }
