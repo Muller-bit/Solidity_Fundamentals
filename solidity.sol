@@ -146,5 +146,7 @@ contract StorageLocation {
 contract Counter {
     uint256 public count = 0;
     // This function increases the count by 1
-    function increment() public {}
+    function increment() public {
+        count = count + 1; // You can also write: count += 1;
+    }
 }
