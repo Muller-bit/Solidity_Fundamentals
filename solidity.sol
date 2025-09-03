@@ -150,5 +150,7 @@ contract Counter {
         count = count + 1; // You can also write: count += 1;
     }
     // This function decreases the count by 1
-    function decrement() public {}
+    function decrement() public {
+        count = count - 1; // You can also write: count -= 1;
+    }
 }
