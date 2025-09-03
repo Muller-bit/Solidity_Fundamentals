@@ -143,3 +143,6 @@ contract StorageLocation {
         myStorageArray.push(tempArray[0]); // This updates the blockchain state
     }
 }
+contract Counter {
+    uint256 public count = 0;
+}
