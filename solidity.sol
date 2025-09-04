@@ -154,3 +154,5 @@ contract Counter {
         count = count - 1; // You can also write: count -= 1;
     }
 }
+//inheritance key concept => is , virtual , ovverride
+//Parent contract
