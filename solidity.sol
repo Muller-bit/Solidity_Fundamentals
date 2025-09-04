@@ -156,3 +156,5 @@ contract Counter {
 }
 //inheritance key concept => is , virtual , ovverride
 //Parent contract
+
+//Child contract
