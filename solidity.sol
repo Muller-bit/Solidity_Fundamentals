@@ -169,5 +169,6 @@ contract child is parent {
         favoriteNumber = number + 5;
     }
     //main function part ,name,visibility,parameters,return type
-    function add(uint256 favNumber) public {}
+    function add(uint256 favNumber) public pure return(){}
+    
 }
