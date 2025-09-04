@@ -159,7 +159,7 @@ contract Counter {
 contract parent {
     uint256 public favoriteNumber;
     function(uint256 number) public virtual {
-        
+        favoriteNumber = number;
     }
 }
 //Child contract
