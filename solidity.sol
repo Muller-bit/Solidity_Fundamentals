@@ -156,5 +156,11 @@ contract Counter {
 }
 //inheritance key concept => is , virtual , ovverride
 //Parent contract
-
+contract parent{
+   uint256 public favoriteNumber;
+   function
+}
 //Child contract
+contract child{
+
+}
