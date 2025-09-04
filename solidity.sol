@@ -158,9 +158,14 @@ contract Counter {
 //Parent contract
 contract parent {
     uint256 public favoriteNumber;
-    function(uint256 number) public virtual {
+    function storeNumber(uint256 number) public virtual {
         favoriteNumber = number;
     }
 }
+
 //Child contract
-contract child {}
+contract child is parent {
+    function storeNumber() public override {
+        favoriteNumber = number + 5;
+    }
+}
