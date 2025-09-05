@@ -174,4 +174,7 @@ contract child is parent {
     }
     //Special Function Types
     //view: Can read but not modify state
+    function getCount() public view returns (uint256) {
+        return count;
+    }
 }
