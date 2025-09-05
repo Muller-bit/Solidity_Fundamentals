@@ -177,4 +177,5 @@ contract child is parent {
     function getCount() public view returns (uint256) {
         return count;
     }
+    //pure: Cannot read or modify state
 }
