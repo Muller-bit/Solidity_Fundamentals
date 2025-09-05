@@ -207,6 +207,7 @@ contract PaymentExample {
     mapping(address => uint256) public payments;
     //We create function that can receive ETH
     function makePayment() public payable {
-        require(msg.sender > 0, "Must send some ETH");
+        require(msg.value > 0, "Must send some ETH");
+        payments[msg.sender] += msg.value; // msg.value is the amount of ETH sent
     }
 }
