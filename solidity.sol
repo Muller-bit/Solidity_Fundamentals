@@ -193,3 +193,12 @@ contract child is parent {
         balances[user] += msg.value; // more on this "msg.value" coming in a second!
     }
 }
+
+//Transaction Context Variables
+contract OwnerExample {
+    address public owner;
+
+    constructor() {
+        owner = msg.sender; // The address that deploys the contract becomes the owner
+    }
+}
