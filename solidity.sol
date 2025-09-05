@@ -178,4 +178,7 @@ contract child is parent {
         return count;
     }
     //pure: Cannot read or modify state
+    function addNumbers(uint256 a, uint256 b) public pure returns (uint256) {
+        return a + b;
+    }
 }
