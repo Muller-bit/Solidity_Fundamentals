@@ -173,4 +173,5 @@ contract child is parent {
         return a + b;
     }
     //Special Function Types
+    //view: Can read but not modify state
 }
