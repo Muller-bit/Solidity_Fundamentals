@@ -165,11 +165,12 @@ contract parent {
 
 //Child contract
 contract child is parent {
-    function storeNumber() public override {
+    function storeNumber(uint256 number) public override {
         favoriteNumber = number + 5;
     }
     //main function part name,parameters,visibility ,return type
     function add(uint256 a, uint256 b) public pure returns (uint256) {
         return a + b;
     }
+    //Special Function Types
 }
