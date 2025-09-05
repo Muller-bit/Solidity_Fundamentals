@@ -181,4 +181,8 @@ contract child is parent {
     function addNumbers(uint256 a, uint256 b) public pure returns (uint256) {
         return a + b;
     }
+    //constructor: Runs only once when the contract is deployed
+    constructor() {
+        owner = msg.sender; // Sets the contract creator as the owner
+    }
 }
