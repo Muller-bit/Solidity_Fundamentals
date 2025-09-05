@@ -210,4 +210,7 @@ contract PaymentExample {
         require(msg.value > 0, "Must send some ETH");
         payments[msg.sender] += msg.value; // msg.value is the amount of ETH sent
     }
+
+    //Function that checks if the minimum payment was made
+    function verifyMinimumPayment() {}
 }
