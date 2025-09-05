@@ -214,5 +214,7 @@ contract PaymentExample {
     //Function that checks if the minimum payment was made
     function verifyMinimumPayment(
         uint256 minAmount
-    ) public view returns (bool) {}
+    ) public view returns (bool) {
+        return payments[msg.sender] >= minAmount;
+    }
 }
