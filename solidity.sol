@@ -202,3 +202,5 @@ contract OwnerExample {
         owner = msg.sender; // The address that deploys the contract becomes the owner
     }
 }
+//msg.value: The amount of ETH (in wei) sent with the function call:
+contract PaymentExample {}
