@@ -188,4 +188,8 @@ contract child is parent {
     }
     //payable: means that the function can be sent ether.
     mapping(address => uint256) balances;
+
+    function sendMeMoney() public payable {
+        balances[user] += msg.value; // more on this "msg.value" coming in a second!
+    }
 }
