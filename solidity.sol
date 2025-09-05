@@ -203,4 +203,6 @@ contract OwnerExample {
     }
 }
 //msg.value: The amount of ETH (in wei) sent with the function call:
-contract PaymentExample {}
+contract PaymentExample {
+    mapping(address => uint256) public payments;
+}
