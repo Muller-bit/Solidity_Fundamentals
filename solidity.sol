@@ -212,5 +212,7 @@ contract PaymentExample {
     }
 
     //Function that checks if the minimum payment was made
-    function verifyMinimumPayment() {}
+    function verifyMinimumPayment(
+        uint256 minAmount
+    ) public view returns (bool) {}
 }
