@@ -206,5 +206,7 @@ contract OwnerExample {
 contract PaymentExample {
     mapping(address => uint256) public payments;
     //We create function that can receive ETH
-    function makePayment() public payable {}
+    function makePayment() public payable {
+        require(msg.sender > 0, "Must send some ETH");
+    }
 }
