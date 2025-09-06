@@ -225,6 +225,11 @@ contract DataExample {
     function recordCallData() public {
         lastCallData = msg.data; // msg.data contains the full calldata
     }
+
     //We can view the length of the calldata
-    function getCallDataLength() public view returns (uint256) {}
+    function getCallDataLength() public view returns (uint256) {
+        return lastCallData.length;
+    }
 }
+//Block information
+contract TimeStampExample {}
