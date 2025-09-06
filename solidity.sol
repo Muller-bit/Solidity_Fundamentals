@@ -241,4 +241,6 @@ contract TimeStampExample {
     function hasDurationPassed() public view returns (uint256 durationSeconds) {
         return (block.timestamp >= contractCreationTime + durationSeconds);
     }
+    //lets create a simple time lock that release after a specific date
+    function isTimelockexpired() {}
 }
