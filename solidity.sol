@@ -234,5 +234,7 @@ contract DataExample {
 //Block information
 contract TimeStampExample {
     uint256 public contractCreationTime;
-    constructor() {}
+    constructor() {
+        contractCreationTime = block.timestamp; // Timestamp when the contract was deployed
+    }
 }
