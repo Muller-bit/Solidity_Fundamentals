@@ -237,4 +237,5 @@ contract TimeStampExample {
     constructor() {
         contractCreationTime = block.timestamp; // Timestamp when the contract was deployed
     }
+    //check if a specspific time has passed since  contract creation
 }
