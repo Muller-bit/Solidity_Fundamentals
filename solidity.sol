@@ -226,5 +226,5 @@ contract DataExample {
         lastCallData = msg.data; // msg.data contains the full calldata
     }
     //We can view the length of the calldata
-    function getCallDataLength() {}
+    function getCallDataLength() public {}
 }
