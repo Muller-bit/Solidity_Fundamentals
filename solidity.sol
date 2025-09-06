@@ -218,3 +218,7 @@ contract PaymentExample {
         return payments[msg.sender] >= minAmount;
     }
 }
+// Lets explore msg.data: The complete calldata (input data) for the function call
+contract DataExample {
+    
+}
