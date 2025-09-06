@@ -242,5 +242,7 @@ contract TimeStampExample {
         return (block.timestamp >= contractCreationTime + durationSeconds);
     }
     //lets create a simple time lock that release after a specific date
-    function isTimeLockExpired() {}
+    function isTimeLockExpired(
+        uint256 releaseTime
+    ) public view returns (bool) {}
 }
