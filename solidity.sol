@@ -220,5 +220,5 @@ contract PaymentExample {
 }
 // Lets explore msg.data: The complete calldata (input data) for the function call
 contract DataExample {
-    
+    bytes public lastCallData;
 }
