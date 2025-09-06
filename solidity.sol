@@ -234,4 +234,5 @@ contract DataExample {
 //Block information
 contract TimeStampExample {
     uint256 public contractCreationTime;
+    constructor() {}
 }
