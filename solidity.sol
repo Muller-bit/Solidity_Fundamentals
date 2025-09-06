@@ -222,5 +222,7 @@ contract PaymentExample {
 contract DataExample {
     bytes public lastCallData;
     //store the raw  calldata of the latest tnx
-    function recordCallData() public {}
+    function recordCallData() public {
+        lastCallData = msg.data; // msg.data contains the full calldata
+    }
 }
