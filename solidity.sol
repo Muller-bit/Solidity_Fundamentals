@@ -275,7 +275,7 @@ contract TimeLockedWallet {
 
     event Deposit(address indexed sender,uint256 amount, uint256 timestamp)
     event Withdrawal(uint256 amount, uint256 timestamp)
-    constructor()
+    constructor(uint256 _unlockDuration)
 {
    owner = msg.sender;
    unlockTime = block.timestamp + _unlockDuration;
