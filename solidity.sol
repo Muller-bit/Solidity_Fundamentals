@@ -267,3 +267,6 @@ contract BlockNumberExample {
         return getBlockPassed() >= blockThreshold;
     }
 }
+//Now lets combine all the concepts in a single contract and learn more about context variables
+
+contract 
