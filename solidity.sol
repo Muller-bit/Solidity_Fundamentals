@@ -250,6 +250,7 @@ contract TimeStampExample {
 contract BlockNumberExample {
     uint256 public deploymentBlockNumber;
     constructor() {
+        //here we used  contructor to get the exact block number when the contract was deployed ,constructors runs during the contract execution
         deploymentBlockNumber = block.number;
     }
 
@@ -260,5 +261,9 @@ contract BlockNumberExample {
     }
 
     //check if enough blocks have paased for a specific action
-    function hasReachedBlockThreshold() {}
+    function hasReachedBlockThreshold(
+        uint256 blockThreshold
+    ) public view returns (bool) {
+        return getBlockPassed() >= blockThreshold;
+    }
 }
