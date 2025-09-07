@@ -294,6 +294,8 @@ function deposit ()public payable{
 
 function withdraw()public{
     require(msg.sender == owner , "Only the owner can withdraw");
+    require(block.timestamp >=unlockTime ,"Funds are still locked ");
+    require(address(this).balance >0 ,"No funds to withdraw");
 
 }
 }
