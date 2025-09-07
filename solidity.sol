@@ -254,4 +254,5 @@ contract BlockNumberExample {
     }
 
     //lets check how many blocks have been mined since deployment
+    function blockSinceDeployment() public view returns (uint256) {}
 }
