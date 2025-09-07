@@ -271,4 +271,7 @@ contract BlockNumberExample {
 
 contract TimeLockedWallet {
     address public owner; // Owner of the wallet
+    uint256 public unlockTime;//Unlock time
+
+    event Deposit(address indexed sender,uint256 amount, uint256 timestamp)
 }
