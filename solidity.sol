@@ -256,5 +256,6 @@ contract BlockNumberExample {
     //lets check how many blocks have been mined since deployment
     function blockSinceDeployment() public view returns (uint256) {
         return (block.number - deploymentBlockNumber);
+        //the total number of block mined  - the block number when the contract was deployed
     }
 }
