@@ -250,6 +250,8 @@ contract TimeStampExample {
 contract BlockNumberExample {
     uint256 public deploymentBlockNumber;
     constructor() {
-        deploymentBlockNumber =  block.number
+        deploymentBlockNumber = block.number;
     }
+
+    //lets check how many blocks have been mined since deployment
 }
