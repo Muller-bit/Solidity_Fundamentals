@@ -278,6 +278,7 @@ contract TimeLockedWallet {
     constructor()
 {
    owner = msg.sender;
-   
+   unlockTime = block.timestamp + _unlockDuration;
+
 }
 }
