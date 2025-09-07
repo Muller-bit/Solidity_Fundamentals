@@ -246,3 +246,4 @@ contract TimeStampExample {
         return block.timestamp >= releaseTime;
     }
 }
+//lets implement block based logic ,block.number
