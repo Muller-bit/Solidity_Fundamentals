@@ -156,7 +156,7 @@ contract Counter {
 }
 //inheritance key concept => is , virtual , ovverride
 //Parent contract
-contract parent {
+contract Parent {
     uint256 public favoriteNumber;
     function storeNumber(uint256 number) public virtual {
         favoriteNumber = number;
@@ -164,7 +164,7 @@ contract parent {
 }
 
 //Child contract
-contract child is parent {
+contract Child is Parent {
     function storeNumber(uint256 number) public override {
         favoriteNumber = number + 5;
     }
