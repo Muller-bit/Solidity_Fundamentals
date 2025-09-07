@@ -258,4 +258,6 @@ contract BlockNumberExample {
         return (block.number - deploymentBlockNumber);
         //the total number of block mined  - the block number when the contract was deployed
     }
+
+    //check if enough blocks have paased for a specific action
 }
