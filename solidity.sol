@@ -274,4 +274,9 @@ contract TimeLockedWallet {
     uint256 public unlockTime;//Unlock time
 
     event Deposit(address indexed sender,uint256 amount, uint256 timestamp)
+    event Withdrawal(uint256 amount, uint256 timestamp)
+    constructor()
+{
+
+}
 }
