@@ -269,4 +269,6 @@ contract BlockNumberExample {
 }
 //Now lets combine all the concepts in a single contract and learn more about context variables
 
-contract TimeLockedWallet {}
+contract TimeLockedWallet {
+    address public owner; // Owner of the wallet
+}
