@@ -284,4 +284,7 @@ contract TimeLockedWallet {
 }
 
 //Accept deposits from anyone
+function deposit ()public payable{
+
+}
 }
