@@ -249,4 +249,5 @@ contract TimeStampExample {
 //lets implement block based logic ,block.number
 contract BlockNumberExample {
     uint256 public deploymentBlockNumber;
+    constructor() {}
 }
