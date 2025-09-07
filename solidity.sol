@@ -123,7 +123,7 @@ contract PointerExample {
         // This modifies only the memory copy, not the storage array
         memoryArray[1] = 200;
 
-        // At this point, storageArray is still [100, 2, 3]
+        // At this point, storageArray is still [100, 2, 3];
         // and memoryArray is [100, 200, 3]
     }
 }
@@ -275,10 +275,13 @@ contract TimeLockedWallet {
 
     event Deposit(address indexed sender,uint256 amount, uint256 timestamp)
     event Withdrawal(uint256 amount, uint256 timestamp)
+
     constructor(uint256 _unlockDuration)
 {
    owner = msg.sender;
    unlockTime = block.timestamp + _unlockDuration;
 
 }
+
+//Accept deposits from anyone
 }
