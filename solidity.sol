@@ -286,6 +286,7 @@ contract TimeLockedWallet {
 //Accept deposits from anyone
 function deposit ()public payable{
    require(msg.value > 0, "Must deposit some ETH");
-   
+   emit Deposit(msg.sender ,msg.value ,block.timestamp);
+
 }
 }
