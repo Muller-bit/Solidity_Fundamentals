@@ -293,7 +293,7 @@ function deposit ()public payable{
 //Only the owner can withdraw funds  after the unlock time
 
 function withdraw()public{
-    
+    require(msg.sender == owner , "Only the owner can withdraw");
 
 }
 }
