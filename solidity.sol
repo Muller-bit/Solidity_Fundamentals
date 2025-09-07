@@ -283,10 +283,12 @@ contract TimeLockedWallet {
 
 }
 
-//Accept deposits from anyone
+//Accept deposits from anyone ,opens
 function deposit ()public payable{
    require(msg.value > 0, "Must deposit some ETH");
+   //Please write this event into the blockchain notebook so everyone can see it later.”
    emit Deposit(msg.sender ,msg.value ,block.timestamp);
+
 
 }
 }
