@@ -277,6 +277,7 @@ contract TimeLockedWallet {
     event Withdrawal(uint256 amount, uint256 timestamp)
     constructor()
 {
-
+   owner = msg.sender;
+   
 }
 }
