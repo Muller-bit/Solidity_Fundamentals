@@ -219,6 +219,7 @@ contract PaymentExample {
     }
 }
 // Lets explore msg.data: The complete calldata (input data) for the function call
+
 contract DataExample {
     bytes public lastCallData;
     //store the raw  calldata of the latest tnx
@@ -231,6 +232,7 @@ contract DataExample {
         return lastCallData.length;
     }
 }
+
 //Block information
 contract TimeStampExample {
     uint256 public contractCreationTime;
@@ -246,6 +248,7 @@ contract TimeStampExample {
         return block.timestamp >= releaseTime;
     }
 }
+
 //lets implement block based logic ,block.number
 contract BlockNumberExample {
     uint256 public deploymentBlockNumber;
@@ -271,31 +274,28 @@ contract BlockNumberExample {
 
 contract TimeLockedWallet {
     address public owner; // Owner of the wallet
-    uint256 public unlockTime;//Unlock time
+    uint256 public unlockTime; //Unlock time
 
-    event Deposit(address indexed sender,uint256 amount, uint256 timestamp)
-    event Withdrawal(uint256 amount, uint256 timestamp)
+    event Deposit(address indexed sender, uint256 amount, uint256 timestamp);
+    event Withdrawal(uint256 amount, uint256 timestamp);
 
-    constructor(uint256 _unlockDuration)
-{
-   owner = msg.sender;
-   unlockTime = block.timestamp + _unlockDuration;
+    constructor(uint256 _unlockDuration) {
+        owner = msg.sender;
+        unlockTime = block.timestamp + _unlockDuration;
+    }
 
-}
+    //Accept deposits from anyone ,opens
+    function deposit() public payable {
+        require(msg.value > 0, "Must deposit some ETH");
+        //Please write this event into the blockchain notebook so everyone can see it later.”
+        emit Deposit(msg.sender, msg.value, block.timestamp);
+    }
 
-//Accept deposits from anyone ,opens
-function deposit ()public payable{
-   require(msg.value > 0, "Must deposit some ETH");
-   //Please write this event into the blockchain notebook so everyone can see it later.”
-   emit Deposit(msg.sender ,msg.value ,block.timestamp);
-}
+    //Only the owner can withdraw funds  after the unlock time
 
-//Only the owner can withdraw funds  after the unlock time
-
-function withdraw()public{
-    require(msg.sender == owner , "Only the owner can withdraw");
-    require(block.timestamp >=unlockTime ,"Funds are still locked ");
-    require(address(this).balance >0 ,"No funds to withdraw");
-
-}
+    function withdraw() public {
+        require(msg.sender == owner, "Only the owner can withdraw");
+        require(block.timestamp >= unlockTime, "Funds are still locked ");
+        require(address(this).balance > 0, "No funds to withdraw");
+    }
 }
