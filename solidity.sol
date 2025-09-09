@@ -300,6 +300,6 @@ contract TimeLockedWallet {
 
         uint256 balance = address(this).balance;
         payable(owner).transfer(balance); // Transfer all funds to the owner
-        emit Withdrawal(balance, block.timestamp);
+        emit Withdrawal(balance, block.timestamp); // Log the withdrawal event or ,hey blockchain, write this event into the blockchain notebook so everyone can see it later.
     }
 }
