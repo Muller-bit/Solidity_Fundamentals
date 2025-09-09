@@ -297,5 +297,8 @@ contract TimeLockedWallet {
         require(msg.sender == owner, "Only the owner can withdraw");
         require(block.timestamp >= unlockTime, "Funds are still locked ");
         require(address(this).balance > 0, "No funds to withdraw"); //incase the user tries to withdraw when there is no funds
+
+        uint256 balance = address(this).balance;
+        payable(owner).transfer(balance); // Transfer all funds to the owner
     }
 }
