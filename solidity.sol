@@ -271,7 +271,7 @@ contract BlockNumberExample {
     }
 }
 //Now lets combine all the concepts in a single contract and learn more about context variables
-
+//Combining Context Variables in a Contract
 contract TimeLockedWallet {
     address public owner; // Owner of the wallet
     uint256 public unlockTime; // Unlock time
