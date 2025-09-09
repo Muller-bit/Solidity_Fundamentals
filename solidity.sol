@@ -284,7 +284,7 @@ contract TimeLockedWallet {
         unlockTime = block.timestamp + _unlockDuration;
     }
 
-    //Accept deposits from anyone , its payable (Recive funds   in ETH)
+    //Accept deposits from anyone , its payable (it Recive funds   in ETH)
     function deposit() public payable {
         require(msg.value > 0, "Must deposit some ETH");
         //Please write this event into the blockchain notebook so everyone can see it later.”
@@ -296,6 +296,6 @@ contract TimeLockedWallet {
     function withdraw() public {
         require(msg.sender == owner, "Only the owner can withdraw");
         require(block.timestamp >= unlockTime, "Funds are still locked ");
-        require(address(this).balance > 0, "No funds to withdraw");
+        require(address(this).balance > 0, "No funds to withdraw"); //incase the user tries to withdraw when there is no funds
     }
 }
