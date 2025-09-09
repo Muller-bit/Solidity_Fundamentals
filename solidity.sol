@@ -274,7 +274,7 @@ contract BlockNumberExample {
 
 contract TimeLockedWallet {
     address public owner; // Owner of the wallet
-    uint256 public unlockTime; //Unlock time
+    uint256 public unlockTime; // Unlock time
 
     event Deposit(address indexed sender, uint256 amount, uint256 timestamp);
     event Withdrawal(uint256 amount, uint256 timestamp);
@@ -284,7 +284,7 @@ contract TimeLockedWallet {
         unlockTime = block.timestamp + _unlockDuration;
     }
 
-    //Accept deposits from anyone ,opens
+    //Accept deposits from anyone , opens
     function deposit() public payable {
         require(msg.value > 0, "Must deposit some ETH");
         //Please write this event into the blockchain notebook so everyone can see it later.”
