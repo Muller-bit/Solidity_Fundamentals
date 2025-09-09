@@ -300,5 +300,6 @@ contract TimeLockedWallet {
 
         uint256 balance = address(this).balance;
         payable(owner).transfer(balance); // Transfer all funds to the owner
+        emit Withdrawal(balance, block.timestamp);
     }
 }
