@@ -284,7 +284,7 @@ contract TimeLockedWallet {
         unlockTime = block.timestamp + _unlockDuration;
     }
 
-    //Accept deposits from anyone , opens
+    //Accept deposits from anyone , its payable (Recive funds   in ETH)
     function deposit() public payable {
         require(msg.value > 0, "Must deposit some ETH");
         //Please write this event into the blockchain notebook so everyone can see it later.”
