@@ -309,7 +309,9 @@ contract TimeLockedWallet {
         returns (bool canWithdraw, uint256 remainingTime)
     {
         if (block.timestamp >= unlockTime) {
-            return (true);
+            return (true, 0);
+        } else {
+            return (false, unlockTime - block.timestamp); //the remaining time until unlock
         }
     }
 }
