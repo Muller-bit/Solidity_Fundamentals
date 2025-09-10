@@ -314,4 +314,5 @@ contract TimeLockedWallet {
             return (false, unlockTime - block.timestamp); //the remaining time until unlock
         }
     }
+    //These are key concepts for authentication and time-based access control in smart contracts.
 }
