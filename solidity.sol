@@ -328,4 +328,8 @@ contract TimeLockedWallet {
     }
 
     //loops, which repeat code until a condition is met
+
+    function sumArray(uint256[] memory numbers) public pure returns (uint256) {
+        uint256 total = 0;
+    }
 }
