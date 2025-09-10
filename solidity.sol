@@ -314,6 +314,7 @@ contract TimeLockedWallet {
             return (false, unlockTime - block.timestamp); //the remaining time until unlock
         }
     }
+
     //These are key concepts for authentication and time-based access control in smart contracts.
     //Control structures: if, else, while, for naking decisions and loops
     function checkValue(uint256 value) public view returns (string memory) {
@@ -325,4 +326,6 @@ contract TimeLockedWallet {
             return "value is less than 100";
         }
     }
+
+    //loops, which repeat code until a condition is met
 }
