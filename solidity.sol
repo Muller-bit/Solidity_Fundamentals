@@ -303,5 +303,13 @@ contract TimeLockedWallet {
         emit Withdrawal(balance, block.timestamp); // Log the withdrawal event or ,hey blockchain, write this event into the blockchain notebook so everyone can see it later.
     }
     //check if the withdrawal is possible yet
-    function WithdrawalStatus() public view returns (bool canWithdraw) {}
+    function WithdrawalStatus()
+        public
+        view
+        returns (bool canWithdraw, uint256 remainingTime)
+    {
+        if (block.timestamp >= unlockTime) {
+            return (true);
+        }
+    }
 }
