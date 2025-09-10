@@ -321,6 +321,8 @@ contract TimeLockedWallet {
             return "value is greater than 100";
         } else if (value == 100) {
             return "value is exactly 100";
+        } else {
+            return "value is less than 100";
         }
     }
 }
