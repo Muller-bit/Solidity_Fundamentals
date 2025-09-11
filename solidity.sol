@@ -336,4 +336,6 @@ contract TimeLockedWallet {
         }
         return total;
     }
+
+    //In solidity each operation costs gas, so be careful with loops that could run too long
 }
