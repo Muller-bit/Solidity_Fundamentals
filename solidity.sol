@@ -353,4 +353,14 @@ contract TimeLockedWallet {
 
     //custom errors - for gas efficiency
     error InsufficientBalance(address user, uint256 balance, uint256 amount);
+
+    function withdraw(uint256 amount) public {
+        if (balances[msg.sender < amount]) {
+            revert InsufficientBalance(
+                msg.sender,
+                balances[msg.sender],
+                amount
+            );
+        }
+    }
 }
