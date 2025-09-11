@@ -342,5 +342,8 @@ contract TimeLockedWallet {
     //Error Handling and Requirements
     //Require statements
 
-    function withdraw(uint256 amount) public {}
+    function withdraw(uint256 amount) public {
+        require(msg.sender == owner, "Only the owner can withdraw");
+        require((balances[msg.sender] >= amount), "Insufficient funds");
+    }
 }
