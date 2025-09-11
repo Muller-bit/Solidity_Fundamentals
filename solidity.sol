@@ -341,4 +341,6 @@ contract TimeLockedWallet {
     //too many iterrations can exceed blockgas limit ,this so called as denial of srvice (DoS)
     //Error Handling and Requirements
     //Require statements
+
+    function withdraw(uint256 amount) public {}
 }
