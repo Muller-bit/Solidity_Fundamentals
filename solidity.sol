@@ -350,4 +350,7 @@ contract TimeLockedWallet {
     }
 
     //The second parameter is an error message that helps users understand what went wrong.
+
+    //custom errors - for gas efficiency
+    error InsufficientBalance(address user, uint256 balance, uint256 amount);
 }
