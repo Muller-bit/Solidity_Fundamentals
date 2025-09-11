@@ -344,6 +344,6 @@ contract TimeLockedWallet {
 
     function withdraw(uint256 amount) public {
         require(msg.sender == owner, "Only the owner can withdraw");
-        require((balances[msg.sender] >= amount), "Insufficient funds");
+        require((balances[msg.sender] >= amount), "Insufficient funds"); // it checks if the sender has enough balance to withdraw the specified amount
     }
 }
