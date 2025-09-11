@@ -361,6 +361,9 @@ contract TimeLockedWallet {
                 balances[msg.sender],
                 amount
             );
+
+            balances[msg.sender] -= amount; // Deduct the amount from the sender's balance
+            payable(msg.sender).transfer(amount); // Transfer the amount to the sender
         }
     }
 }
