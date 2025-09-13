@@ -379,5 +379,7 @@ contract Token {
         require(balances[msg.sender] >= amount, "Insufficient balance"); // check if the sender has enough balance
         balances[msg.sender] -= amount; // Deduct the amount from the sender's balance , do this first to prevent re-entrancy attacks
         balances[to] += amount; // Add the amount to the recipient's balance
+
+        emit Transfer(msg.sender, amount, to); // Emit the Transfer event so that others can see the transaction on the blockcain
     }
 }
