@@ -367,6 +367,10 @@ contract TimeLockedWallet {
             //make sure to deduct first before transfer to prevent re-entrancy attacks
         }
     }
-    //Events ,communicating with the outside world
-    //Events should be emitted when the contract state is updated:
+}
+//Events ,communicating with the outside world
+//Events should be emitted when the contract state is updated:
+
+contract Token {
+    event Transfer(address indexed from, uint256 amount, address indexed to);
 }
