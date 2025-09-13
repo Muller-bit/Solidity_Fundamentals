@@ -385,10 +385,11 @@ contract Token {
     //The indexed keyword makes it easier to search for specific events later.
 }
 
-
 //Modifiers: Reusable code for function pre-conditions
 //They are a way to create resusable logic for functions
 
-contract Owned{
- address public owner;
+contract Owned {
+    address public owner;
+
+    constructor() {}
 }
