@@ -409,4 +409,6 @@ contract Owned {
     //The _ in the modifier represents where the function code will be executed. For example, if the _ is before the modifier logic,
     //the function will be executed before the modifier logic.
     //Interfaces - like remote controls or game controllers
+    //This is just the controller. It doesn’t say what happens when you press start, play, or end
+    // Itenrface =  the controller (just tells which buttons exist )
 }
