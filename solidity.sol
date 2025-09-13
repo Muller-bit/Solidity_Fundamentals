@@ -386,3 +386,4 @@ contract Token {
 }
 
 //Modifiers: Reusable code for function pre-conditions
+//They are a way to create resusable logic for functions
