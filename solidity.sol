@@ -403,4 +403,7 @@ contract Owned {
     function setOwner(address newOwner) public onlyOwner {
         owner = newOwner; // Only the current owner can change ownership
     }
+
+    //The _ in the modifier represents where the function code will be executed. For example, if the _ is before the modifier logic,
+    //the function will be executed before the modifier logic.
 }
