@@ -374,4 +374,8 @@ contract TimeLockedWallet {
 contract Token {
     event Transfer(address indexed from, uint256 amount, address indexed to);
     mapping(address => uint256) public balances;
+
+    function transfe(address to, uint256 amount) public {
+        require(balances[msg.sender] >= amount, "Insufficient balance"); // check if the sender has enough balance
+    }
 }
