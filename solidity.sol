@@ -390,7 +390,7 @@ contract Token {
 
 contract Owned {
     address public owner;
-
+    //Special function that runs once during contract deployment
     constructor() {
         owner = msg.sender; // Set the contract deployer as the owner
     }
