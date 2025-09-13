@@ -391,5 +391,7 @@ contract Token {
 contract Owned {
     address public owner;
 
-    constructor() {}
+    constructor() {
+        owner = msg.sender; // Set the contract deployer as the owner
+    }
 }
