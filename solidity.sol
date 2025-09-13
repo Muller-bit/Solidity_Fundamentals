@@ -390,11 +390,13 @@ contract Token {
 
 contract Owned {
     address public owner;
+
     //Special function that runs once during contract deployment
     constructor() {
         owner = msg.sender; // Set the contract deployer as the owner
     }
 
+    //modifier to restrict access to only the owner , they are basically rules that can be applied to functions to change their behavior
     modifier onlyOwner() {
         require(msg.sender == owner, "Only the owner can call this function");
         _; // This means "insert the rest of the function code here" or This placeholder is replaced with the function code
@@ -406,4 +408,5 @@ contract Owned {
 
     //The _ in the modifier represents where the function code will be executed. For example, if the _ is before the modifier logic,
     //the function will be executed before the modifier logic.
+    //Interfaces - like remote controls or game controllers
 }
