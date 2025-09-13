@@ -418,3 +418,4 @@ interface IPayable {
     function pay(address recipient, uint256 amount) external returns (bool);
     function getBalance(address account) external view returns (uint256);
 }
+//Any contract that implements this interface must include these exact functions:
