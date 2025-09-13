@@ -373,4 +373,5 @@ contract TimeLockedWallet {
 
 contract Token {
     event Transfer(address indexed from, uint256 amount, address indexed to);
+    mapping(address => uint256) public balances;
 }
