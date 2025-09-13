@@ -394,4 +394,9 @@ contract Owned {
     constructor() {
         owner = msg.sender; // Set the contract deployer as the owner
     }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only the owner can call this function");
+        _; // This means "insert the rest of the function code here" or This placeholder is replaced with the function code
+    }
 }
