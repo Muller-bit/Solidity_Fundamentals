@@ -399,4 +399,8 @@ contract Owned {
         require(msg.sender == owner, "Only the owner can call this function");
         _; // This means "insert the rest of the function code here" or This placeholder is replaced with the function code
     }
+
+    function setOwner(address newOwner) public onlyOwner {
+        owner = newOwner; // Only the current owner can change ownership
+    }
 }
