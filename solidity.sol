@@ -411,4 +411,5 @@ contract Owned {
     //Interfaces - like remote controls or game controllers
     //This is just the controller. It doesn’t say what happens when you press start, play, or end
     // Itenrface =  the controller (just tells which buttons exist )
+    //Contract = the game console (defines what happens when you press the buttons
 }
