@@ -348,7 +348,6 @@ contract TimeLockedWallet {
         balances[msg.sender] -= amount; // Deduct the amount from the sender's balance
         payable(msg.sender).transfer(amount); // Transfer the amount to the sender
     }
-    
 
     //The second parameter is an error message that helps users understand what went wrong.
 
@@ -368,4 +367,5 @@ contract TimeLockedWallet {
             //make sure to deduct first before transfer to prevent re-entrancy attacks
         }
     }
+    //Events ,communicating with the outside world
 }
