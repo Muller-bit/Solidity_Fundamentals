@@ -384,3 +384,5 @@ contract Token {
     }
     //The indexed keyword makes it easier to search for specific events later.
 }
+
+//Modifiers: Reusable code for function pre-conditions
