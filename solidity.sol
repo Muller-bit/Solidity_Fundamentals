@@ -368,4 +368,5 @@ contract TimeLockedWallet {
         }
     }
     //Events ,communicating with the outside world
+    //Events should be emitted when the contract state is updated:
 }
