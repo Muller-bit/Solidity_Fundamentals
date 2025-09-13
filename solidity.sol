@@ -372,7 +372,7 @@ contract TimeLockedWallet {
 //Events should be emitted when the contract state is updated:
 
 contract Token {
-    event Transfer(address indexed from, address indexed to , uint256 amount );
+    event Transfer(address indexed from, address indexed to, uint256 amount);
     mapping(address => uint256) public balances;
 
     function transfe(address to, uint256 amount) public {
@@ -380,6 +380,7 @@ contract Token {
         balances[msg.sender] -= amount; // Deduct the amount from the sender's balance , do this first to prevent re-entrancy attacks
         balances[to] += amount; // Add the amount to the recipient's balance
 
-        emit Transfer(msg.sender, to , amount); // Emit the Transfer event so that others can see the transaction on the blockcain
+        emit Transfer(msg.sender, to, amount); // Emit the Transfer event so that others can see the transaction on the blockcain
     }
+    //The indexed keyword makes it easier to search for specific events later.
 }
