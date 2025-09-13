@@ -377,5 +377,6 @@ contract Token {
 
     function transfe(address to, uint256 amount) public {
         require(balances[msg.sender] >= amount, "Insufficient balance"); // check if the sender has enough balance
+        balances[msg.sender] -= amount; // Deduct the amount from the sender's balance , do this first to prevent re-entrancy attacks
     }
 }
