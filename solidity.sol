@@ -428,7 +428,7 @@ contract PaymentProcessor is IPayable {
         uint256 amount
     ) external override returns (bool) {
         require(balances[msg.sender] >= amount, "Insufficient balance");
-        balances[msg.sender] -= amount;
+        balances[msg.sender] -= amount; //deduct from sender first to prevent re-entrancy attacks
         balances[recipient] += amount;
         return true;
     }
