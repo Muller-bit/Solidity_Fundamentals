@@ -429,10 +429,11 @@ contract PaymentProcessor is IPayable {
     ) external override returns (bool) {
         require(balances[msg.sender] >= amount, "Insufficient balance");
         balances[msg.sender] -= amount; //deduct from sender first to prevent re-entrancy attacks
-        balances[recipient] += amount; // we are adding to the recipient balance
+        balances[recipient] += amount; // we are adding to the recipient balance , not for msg.sender
         return true;
     }
 
+    //dont forget to add the override keyword when implementing interface functions
     function getBalance(
         address account
     ) external view override returns (uint256) {
