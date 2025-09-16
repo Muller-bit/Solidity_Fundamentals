@@ -453,4 +453,9 @@ contract PaymentProcessor is IPayable {
 // It defines how to call functions, what parameters to pass, and what data to expect in return
 // When you compile a Solidity contract, the compiler generates the ABI automatically
 
-contract SimpleMath {}
+contract SimpleMath {
+    //add two numbers and return the result
+    function addTwoNumbers(uint256 a, uint256 b) public pure returns (uint256) {
+        return a + b;
+    }
+}
