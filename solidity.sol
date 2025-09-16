@@ -441,4 +441,5 @@ contract PaymentProcessor is IPayable {
     }
     //Key notes and best paractices
     //Contracts : PascalCase ex: MyContract
+    //Functions and variable names: camelCase ex: myFunction, myVariable
 }
