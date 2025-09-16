@@ -473,5 +473,5 @@ contract SimpleMath {
     //2.Read and understand existing contracts
     //3.Use development tools like Remix, Hardhat, or Truffle
     //4.Write and deploy your own contracts
-    //5.Learn about security best practices
+    //5.Learn about security best practices ,gas optimization and testing
 }
