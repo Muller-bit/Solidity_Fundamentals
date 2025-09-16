@@ -440,4 +440,5 @@ contract PaymentProcessor is IPayable {
         return balances[account];
     }
     //Key notes and best paractices
+    //Contracts : PascalCase ex: MyContract
 }
