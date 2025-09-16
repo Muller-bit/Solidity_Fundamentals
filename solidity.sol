@@ -454,8 +454,9 @@ contract PaymentProcessor is IPayable {
 // When you compile a Solidity contract, the compiler generates the ABI automatically
 
 contract SimpleMath {
+    //ABI is a JSON array that describes everything publically visible on a contract
     //add two numbers and return the result
-    function addTwoNumbers(uint256 a, uint256 b) public pure returns (uint256) {
+    function add(uint256 a, uint256 b) public pure returns (uint256) {
         return a + b;
     }
 }
