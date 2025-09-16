@@ -467,4 +467,10 @@ contract SimpleMath {
     // JavaScript example using ethers.js
     //const contract  = new ethers.Contract(contractAddress, contractABI, provider);
     //await contract.deposit(100); // Call the deposit function
+
+    //BEST PRACTICE SOLUTIONS
+    //1.Practice with simple contracts
+    //2.Read and understand existing contracts
+    //3.Use development tools like Remix, Hardhat, or Truffle
+    //4.Write and deploy your own contracts
 }
