@@ -459,5 +459,7 @@ contract SimpleMath {
     function add(uint256 a, uint256 b) public pure returns (uint256) {
         return a + b;
     }
+
     //ABI-tells you that there is a function named add , which takes two numbers (of type uint256) and returns a number (also of type uint256)
+    //Frontend applications use the ABI to format calls to your contract correctly.
 }
