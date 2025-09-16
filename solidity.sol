@@ -465,4 +465,6 @@ contract SimpleMath {
     //mostly use the use the ABI to interact with a smart contract (using the ethers.js library):
 
     // JavaScript example using ethers.js
+    //const contract  = new ethers.Contract(contractAddress, contractABI, provider);
+    //await contract.deposit(100); // Call the deposit function
 }
