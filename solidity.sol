@@ -396,7 +396,7 @@ contract Owned {
         owner = msg.sender; // Set the contract deployer as the owner
     }
 
-    // modifier to restrict access to only the owner , they are basically rules that can be applied to functions to change their behavior
+    //modifier to restrict access to only the owner , they are basically rules that can be applied to functions to change their behavior
     modifier onlyOwner() {
         require(msg.sender == owner, "Only the owner can call this function");
         _; // This means "insert the rest of the function code here" or This placeholder is replaced with the function code
@@ -410,7 +410,7 @@ contract Owned {
     //the function will be executed before the modifier logic.
     //Interfaces - like remote controls or game controllers
     //This is just the controller. It doesn’t say what happens when you press start, play, or end
-    // Itenrface =  the controller (just tells which buttons exist )
+    // Interface =  the controller (just tells which buttons exist )
     //Contract = the game console (defines what happens when you press the buttons
 }
 
@@ -439,4 +439,5 @@ contract PaymentProcessor is IPayable {
     ) external view override returns (uint256) {
         return balances[account];
     }
+    //Key notes and best paractices
 }
