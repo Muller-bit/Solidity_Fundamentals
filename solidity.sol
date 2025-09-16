@@ -463,4 +463,6 @@ contract SimpleMath {
     //ABI-tells you that there is a function named add , which takes two numbers (of type uint256) and returns a number (also of type uint256)
     //Frontend applications use the ABI to format calls to your contract correctly.
     //mostly use the use the ABI to interact with a smart contract (using the ethers.js library):
+
+    // JavaScript example using ethers.js
 }
