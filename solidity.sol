@@ -450,3 +450,5 @@ contract PaymentProcessor is IPayable {
 }
 // ABI - Application Binary Interface
 // The ABI is like a translator that helps different software understand how to interact with your smart contract
+// It defines how to call functions, what parameters to pass, and what data to expect in return
+// When you compile a Solidity contract, the compiler generates the ABI automatically
