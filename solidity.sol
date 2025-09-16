@@ -445,4 +445,6 @@ contract PaymentProcessor is IPayable {
     //Interfaces: I prefix ex: IPayable
     //constants: UPPER_SNAKE_CASE ex: MAX_SUPPLY
     //state variables: s_ prefix ex: s_balance
+    //Structs: s_ prefix ex: s_Person
+    //Events: e_ prefix ex: e_Transfer
 }
