@@ -448,3 +448,5 @@ contract PaymentProcessor is IPayable {
     //Structs: s_ prefix ex: s_Person
     //Events: e_ prefix ex: e_Transfer
 }
+// ABI - Application Binary Interface
+// The ABI is like a translator that helps different software understand how to interact with your smart contract
