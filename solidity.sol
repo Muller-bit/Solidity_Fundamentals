@@ -443,4 +443,6 @@ contract PaymentProcessor is IPayable {
     //Contracts : PascalCase ex: MyContract
     //Functions and variable names: camelCase ex: myFunction, myVariable
     //Interfaces: I prefix ex: IPayable
+    //constants: UPPER_SNAKE_CASE ex: MAX_SUPPLY
+    //state variables: s_ prefix ex: s_balance
 }
