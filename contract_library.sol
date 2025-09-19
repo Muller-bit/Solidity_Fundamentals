@@ -13,5 +13,7 @@ library MathUtils {
         //this function just  compares two numbers and returns the smaller one , doest not read or modify the state that is why pure is used
     }
 
-    function max(uint256 a, uint256 b) public pure returns (uint256) {}
+    function max(uint256 a, uint256 b) public pure returns (uint256) {
+        return a > b ? a : b; //Ternary operator to return the larger value
+    }
 }
