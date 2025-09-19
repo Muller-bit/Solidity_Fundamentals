@@ -21,5 +21,6 @@ library MathUtils {
 //import "./MathUtils.sol";
 
 contract Calculator {
-    //attch library functions to uint256 type
+    //attach library functions to uint256 type
+    using MathUtils for uint256;
 }
