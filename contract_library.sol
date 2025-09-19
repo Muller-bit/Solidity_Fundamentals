@@ -10,5 +10,6 @@ library MathUtils {
         //view function can read but not modify the state
 
         return a < b ? a : b; //Ternary operator to return the smaller value
+        //this function just  compares two numbers and returns the smaller one , doest not read or modify the state that is why pure is used
     }
 }
