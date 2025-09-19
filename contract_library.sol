@@ -6,7 +6,8 @@ pragma solidity ^0.8.30;
 library MathUtils {
     //find the smallest of two numbers
     function min(uint256 a, uint256 b) public pure returns (uint256) {
-
+        //Pure function does not read or modify the state
+        //view function can read but not modify the state
 
         return a < b ? a : b;
     }
