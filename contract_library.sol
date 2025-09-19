@@ -16,7 +16,10 @@ library MathUtils {
     function max(uint256 a, uint256 b) public pure returns (uint256) {
         return a > b ? a : b; //Ternary operator to return the larger value
     }
+}
+// importing the library
+//import "./MathUtils.sol";
 
-    //two ways to use library functions : using for and direct call
-    //using for : allows to attach library functions to any data type
+contract Calculator {
+    //attch library functions to uint256 type
 }
