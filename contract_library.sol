@@ -5,5 +5,9 @@ pragma solidity ^0.8.30;
 //Contain hlful functions that can be used by other contracts
 library MathUtils {
     //find the smallest of two numbers
-    function min(uint256 a, uint256 b) public view returns (uint256) {}
+    function min(uint256 a, uint256 b) public pure returns (uint256) {
+
+
+        return a < b ? a : b;
+    }
 }
