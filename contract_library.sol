@@ -23,4 +23,6 @@ library MathUtils {
 contract Calculator {
     //attach library functions to uint256 type
     using MathUtils for uint256;
+
+    //Methode 1 : call as a library function
 }
