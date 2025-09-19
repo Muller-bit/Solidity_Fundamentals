@@ -9,6 +9,6 @@ library MathUtils {
         //Pure function does not read or modify the state
         //view function can read but not modify the state
 
-        return a < b ? a : b;
+        return a < b ? a : b; //Ternary operator to return the smaller value
     }
 }
