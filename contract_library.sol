@@ -16,4 +16,7 @@ library MathUtils {
     function max(uint256 a, uint256 b) public pure returns (uint256) {
         return a > b ? a : b; //Ternary operator to return the larger value
     }
+
+    //two ways to use library functions : using for and direct call
+    //using for : allows to attach library functions to any data type
 }
