@@ -10,4 +10,8 @@ contract Calculator {
     function getMinimum(uint256 a, uint256 b) public pure returns (uint256) {
         return MathUtils.min(a, b); // Call the min function from MathUtils library
     }
+
+    function getMaximum(uint256 a, uint256 b) public pure returns (uint256) {
+        return MathUtils.max(a, b); // Call the max function from MathUtils library
+    }
 }
