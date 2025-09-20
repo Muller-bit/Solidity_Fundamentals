@@ -17,12 +17,3 @@ library MathUtils {
         return a > b ? a : b; //Ternary operator to return the larger value
     }
 }
-// importing the library
-//import "./MathUtils.sol";
-
-contract Calculator {
-    //attach library functions to uint256 type
-    using MathUtils for uint256;
-    
-    //Methode 1 : call as a library function
-}
