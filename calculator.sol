@@ -4,4 +4,6 @@ import "./MathUtils.sol"; // Import the library
 contract Calculator {
     //attach the library to uint256 type
     using MathUtils for uint256;
+
+    //methode 1: call the library function directly
 }
