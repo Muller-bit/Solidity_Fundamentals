@@ -14,4 +14,13 @@ contract Calculator {
     function getMaximum(uint256 a, uint256 b) public pure returns (uint256) {
         return MathUtils.max(a, b); // Call the max function from MathUtils library
     }
+
+    //methode 2: call as attached function
+    function getMaximumAsAttached(
+        uint256 a,
+        uint256 b
+    ) public pure returns (uint256) {
+        return a.max(b); // Call the max function as if it were a method on uint256
+        //same as return MathUtils.max(a,b);
+    }
 }
