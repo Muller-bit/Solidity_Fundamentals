@@ -41,7 +41,7 @@ contract BaseToken {
         name = _name;
         totalSupply = 1000000; // Initial supply
     }
-
+    // virtual => can be overridden or can be can be lteredged in derived contract
     function getInfo() public view virtual returns (string memory) {
         return string.concat("Token:", name);
     }
@@ -55,4 +55,5 @@ contract GoldToken is BaseToken {
         return "GLD";
     }
     //In this example, GoldToken inherits all features from BaseToken and adds a new function.
+    //Function overriding
 }
