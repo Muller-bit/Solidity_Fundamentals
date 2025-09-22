@@ -47,3 +47,6 @@ contract BaseToken {
     }
 }
 //Enhanced contract that inherits and extends BaseToken
+contract GoldToken is BaseToken {
+    constructor() BaseToken("Gold Token") {}
+}
