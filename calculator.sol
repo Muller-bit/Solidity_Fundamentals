@@ -29,3 +29,4 @@ contract Calculator {
     //No state variables: Libraries cannot have state variables, which helps in maintaining a clear separation between logic and data, reducing the risk of unintended side effects,makes them perfect for pure utility functions.
 }
 //Contract inheritence
+//It lets a contract inherit properties and methods from another contract
