@@ -37,5 +37,8 @@ contract BaseToken {
     string public name;
     uint256 public totalSupply;
 
-    constructor(string memory _name) {}
+    constructor(string memory _name) {
+        name = _name;
+        totalSupply = 1000000; // Initial supply
+    }
 }
