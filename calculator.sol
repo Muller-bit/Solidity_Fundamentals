@@ -36,4 +36,6 @@ contract Calculator {
 contract BaseToken {
     string public name;
     uint256 public totalSupply;
+
+    constructor(string memory _name) {}
 }
