@@ -26,4 +26,5 @@ contract Calculator {
     //benefits of library
     //Write once, use multiple times: Libraries allow you to write code once and reuse it across multiple contracts, reducing redundancy and potential errors.
     //Gas efficiency: Using libraries can save gas costs,internal function get embedded in the contract bytecode , especially for frequently used functions, as the library code is deployed only once and can be called by multiple contrac
+    //No state variables: Libraries cannot have state variables, which helps in maintaining a clear separation between logic and data, reducing the risk of unintended side effects,makes them perfect for pure utility functions.
 }
