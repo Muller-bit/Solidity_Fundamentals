@@ -29,6 +29,7 @@ contract Calculator {
     //Gas efficiency: Using libraries can save gas costs,internal function get embedded in the contract bytecode , especially for frequently used functions, as the library code is deployed only once and can be called by multiple contrac
     //No state variables: Libraries cannot have state variables, which helps in maintaining a clear separation between logic and data, reducing the risk of unintended side effects,makes them perfect for pure utility functions.
 }
+
 //Contract inheritence
 //It lets a contract inherit properties and methods from another contract
 
@@ -61,3 +62,6 @@ contract GoldToken is BaseToken {
 //Function overriding ,the rules as follows:
 //Mark the parent function with virtual (meaning "can be altered")
 //Mark the child function with override (meaning "this alters a parent function")
+contract NewBaseToken {
+    // The virtual keyword allows this function to be overridden
+}
