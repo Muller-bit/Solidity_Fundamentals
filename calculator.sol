@@ -62,6 +62,10 @@ contract GoldToken is BaseToken {
 //Function overriding ,the rules as follows:
 //Mark the parent function with virtual (meaning "can be altered")
 //Mark the child function with override (meaning "this alters a parent function")
+
 contract NewBaseToken {
     // The virtual keyword allows this function to be overridden
+    function getTokenName() public pure virtual returns (string memory) {
+        return "BaseToken";
+    }
 }
