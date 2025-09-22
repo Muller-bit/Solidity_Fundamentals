@@ -30,3 +30,6 @@ contract Calculator {
 }
 //Contract inheritence
 //It lets a contract inherit properties and methods from another contract
+
+//Core contract with core functionality
+contract BaseToken {}
