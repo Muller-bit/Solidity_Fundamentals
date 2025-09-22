@@ -46,3 +46,4 @@ contract BaseToken {
         return string.concat("Token:", name);
     }
 }
+//Enhanced contract that inherits and extends BaseToken
