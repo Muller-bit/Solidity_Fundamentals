@@ -54,4 +54,5 @@ contract GoldToken is BaseToken {
     function getSymbol() public pure returns (string memory) {
         return "GLD";
     }
+    //In this example, GoldToken inherits all features from BaseToken and adds a new function.
 }
