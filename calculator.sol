@@ -59,3 +59,4 @@ contract GoldToken is BaseToken {
 }
 
 //Function overriding ,the rules as follows:
+//Mark the parent function with virtual (meaning "can be altered")
