@@ -23,4 +23,6 @@ contract Calculator {
         return a.max(b); // Call the max function as if it were a method on uint256
         //same as return MathUtils.max(a,b);
     }
+    //benefits of library
+    //Write once, use multiple times: Libraries allow you to write code once and reuse it across multiple contracts, reducing redundancy and potential errors.
 }
