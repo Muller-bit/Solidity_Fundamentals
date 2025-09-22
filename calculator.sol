@@ -46,6 +46,7 @@ contract BaseToken {
         return string.concat("Token:", name);
     }
 }
+
 //Enhanced contract that inherits and extends BaseToken
 contract GoldToken is BaseToken {
     constructor() BaseToken("Gold Token") {}
@@ -55,5 +56,6 @@ contract GoldToken is BaseToken {
         return "GLD";
     }
     //In this example, GoldToken inherits all features from BaseToken and adds a new function.
-    //Function overriding
 }
+
+//Function overriding ,the rules as follows:
