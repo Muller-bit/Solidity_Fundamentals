@@ -23,6 +23,7 @@ contract Calculator {
         return a.max(b); // Call the max function as if it were a method on uint256
         //same as return MathUtils.max(a,b);
     }
+
     //benefits of library
     //Write once, use multiple times: Libraries allow you to write code once and reuse it across multiple contracts, reducing redundancy and potential errors.
     //Gas efficiency: Using libraries can save gas costs,internal function get embedded in the contract bytecode , especially for frequently used functions, as the library code is deployed only once and can be called by multiple contrac
@@ -34,4 +35,5 @@ contract Calculator {
 //Base  contract with core functionality
 contract BaseToken {
     string public name;
+    uint256 public totalSupply;
 }
