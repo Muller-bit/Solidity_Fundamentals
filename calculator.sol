@@ -41,4 +41,8 @@ contract BaseToken {
         name = _name;
         totalSupply = 1000000; // Initial supply
     }
+
+    function getInfo() public view virtual returns (string memory) {
+        return string.concat("Token:", name);
+    }
 }
