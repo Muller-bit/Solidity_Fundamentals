@@ -51,4 +51,7 @@ contract GoldToken is BaseToken {
     constructor() BaseToken("Gold Token") {}
 
     //Add new functionality
+    function getSymbol() public pure returns (string memory) {
+        return "GLD";
+    }
 }
