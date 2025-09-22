@@ -8,7 +8,7 @@ contract Calculator {
     //methode 1: call as  library function
 
     function getMinimum(uint256 a, uint256 b) public pure returns (uint256) {
-        return MathUtils.min(a, b); // Call the min function from MathUtils library
+        return MathUtils.min(a, b); // Call the min function from MathUtils library , embeded library function
     }
 
     function getMaximum(uint256 a, uint256 b) public pure returns (uint256) {
