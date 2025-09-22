@@ -68,4 +68,6 @@ contract NewBaseToken {
     function getTokenName() public pure virtual returns (string memory) {
         return "BaseToken";
     }
+
+    // The override keyword indicates that this function overrides a parent function
 }
