@@ -111,3 +111,9 @@ contract Token is Mintable, Burnable {
 
 //When Parent Contracts Have Functions with the Same Name
 //We need to explicitly specify which one we are overriding
+
+contract BaseA {
+    function getValue() public pure virtual returns (string memory) {
+        return "A";
+    }
+}
