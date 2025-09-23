@@ -154,3 +154,17 @@ contract TokenX is BaseB, BaseA {
         return super.getValue(); // Returns "B"
     }
 }
+
+// BaseA comes first in the inheritance list
+contract TokenY is BaseA, BaseB {
+    function getValue()
+        public
+        pure
+        override(BaseA, BaseB)
+        returns (string memory)
+    {
+        // This calls BaseA's implementation first
+        return super.getValue(); // Returns "A"
+        //super means like ask the parents who told the story first to thier child
+    }
+}
