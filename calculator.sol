@@ -127,15 +127,14 @@ contract BaseB {
 // Multiple inheritance with function name conflict
 
 contract Combined is BaseB, BaseA {
-    // Override the conflicting function and specify which parent to call
+    //Must specify all the contracts being overridden
     function getValue()
         public
         pure
-        override(BaseA, BaseB)
+        override(BaseB, BaseA)
         returns (string memory)
     {
-        //Must specify all the contracts being overridden
-        return string.concat(BaseA.getValue(), BaseB.getValue());
+        return string.concat(BaseB.getValue(), BaseA.getValue());
         // Returns "AB"
     }
 }
