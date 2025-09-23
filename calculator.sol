@@ -89,3 +89,4 @@ contract ExtendedToken is NewBaseToken {
 
 //Multiple inheritance
 //Solidity allows a contract to inherit from multiple parents, but this requires careful handling.
+contract Mintable {}
