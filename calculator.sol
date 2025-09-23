@@ -170,3 +170,5 @@ contract TokenY is BaseA, BaseB {
 }
 
 //Using OpenZeppelin Contracts
+//uses of inheritance is extending standardized contracts from dependencies like OpenZeppelin:
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
