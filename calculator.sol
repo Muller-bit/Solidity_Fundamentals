@@ -141,3 +141,16 @@ contract Combined is BaseB, BaseA {
 
 //Important Rule: Inheritance Order Matters
 //The order in which you list parent contracts is important:
+
+// BaseB comes first in the inheritance list
+contract TokenX is BaseB, BaseA {
+    function getValue()
+        public
+        pure
+        override(BaseB, BaseA)
+        returns (string memory)
+    {
+        // This calls BaseB's implementation first
+        return super.getValue(); // Returns "B"
+    }
+}
