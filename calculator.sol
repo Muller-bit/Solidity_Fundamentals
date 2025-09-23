@@ -171,5 +171,15 @@ contract TokenY is BaseA, BaseB {
 
 //Using OpenZeppelin Contracts
 //uses of inheritance is extending standardized contracts from dependencies like OpenZeppelin:
-import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-//create a custom  token by ingerting the ERC20 standard implementation
+//import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+//create a custom  token by inheriting the ERC20 standard implementation
+
+import {ERC20} from "./ERC2O/ERC20.sol";
+contract MyToken is ERC20 {
+    constructor() ERC20("My Token", "MTK") {
+        //Mint 1 million tokens to the deployer
+        _mint(msg.sender, 1000000 * 10 ** 18);
+    }
+
+    //Add custom futures here
+}

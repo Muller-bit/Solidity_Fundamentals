@@ -1,0 +1,23 @@
+{
+  "name": "fundamentals",
+  "version": "1.0.0",
+  "description": "<img width=\"632\" height=\"338\" alt=\"image\" src=\"https://github.com/user-attachments/assets/23f4200f-1eed-4865-bee2-bf858df1fe3d\" />",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muller-bit/Solidity_Fundamentals.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muller-bit/Solidity_Fundamentals/issues"
+  },
+  "homepage": "https://github.com/Muller-bit/Solidity_Fundamentals#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0"
+  }
+}
