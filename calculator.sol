@@ -66,7 +66,7 @@ contract GoldToken is BaseToken {
 contract NewBaseToken {
     // The virtual keyword allows this function to be overridden
     function getTokenName() public pure virtual returns (string memory) {
-        return "BaseToken";
+        return "New BaseToken";
     }
 }
 
@@ -79,3 +79,4 @@ contract CustomToken is NewBaseToken {
 
 //Using super to call parent function
 //Sometimes, you want to extend a function rather than completely replace it:
+contract ExtendedToken is NewBaseToken {}
