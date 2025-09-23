@@ -134,7 +134,7 @@ contract Combined is BaseB, BaseA {
         override(BaseA, BaseB)
         returns (string memory)
     {
-        //Must spe
+        //Must specify all the contracts being overridden
         return string.concat(BaseA.getValue(), BaseB.getValue());
         // Returns "AB"
     }
