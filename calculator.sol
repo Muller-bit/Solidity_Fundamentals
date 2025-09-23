@@ -108,3 +108,5 @@ contract Token is Mintable, Burnable {
         return "Can Mint and Burn";
     }
 }
+
+//When Parent Contracts Have Functions with the Same Name
