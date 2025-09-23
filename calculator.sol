@@ -78,3 +78,4 @@ contract CustomToken is NewBaseToken {
 }
 
 //Using super to call parent function
+//Sometimes, you want to extend a function rather than completely replace it:
