@@ -86,3 +86,5 @@ contract ExtendedToken is NewBaseToken {
         // Returns "NewBaseToken Plus"
     }
 }
+
+//Multiple inheritance
