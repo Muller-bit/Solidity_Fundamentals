@@ -117,3 +117,9 @@ contract BaseA {
         return "A";
     }
 }
+
+contract BaseB {
+    function getValue() public pure virtual returns (string memory) {
+        return "B";
+    }
+}
