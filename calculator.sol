@@ -76,3 +76,5 @@ contract CustomToken is NewBaseToken {
         return "CustomToken";
     }
 }
+
+//Using super to call parent function
