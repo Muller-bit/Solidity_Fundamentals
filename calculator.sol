@@ -138,3 +138,5 @@ contract Combined is BaseB, BaseA {
         // Returns "AB"
     }
 }
+
+//Important Rule: Inheritance Order Matters
