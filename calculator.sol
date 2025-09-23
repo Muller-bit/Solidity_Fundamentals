@@ -101,3 +101,10 @@ contract Burnable {
         return true;
     }
 }
+
+//Inherite from both Mintable and Burnable
+contract Token is Mintable, Burnable {
+    function getCapabilities() public pure returns (string memory) {
+        return "Can Mint and Burn";
+    }
+}
