@@ -79,4 +79,10 @@ contract CustomToken is NewBaseToken {
 
 //Using super to call parent function
 //Sometimes, you want to extend a function rather than completely replace it:
-contract ExtendedToken is NewBaseToken {}
+contract ExtendedToken is NewBaseToken {
+    function getTokenName() public pure override returns (string memory) {
+        // Call the parent function and add to it using the super keyword
+        return string.concat(super.getTokenName(), " Plus");
+        // Returns "NewBaseToken Plus"
+    }
+}
