@@ -140,3 +140,4 @@ contract Combined is BaseB, BaseA {
 }
 
 //Important Rule: Inheritance Order Matters
+//The order in which you list parent contracts is important:
