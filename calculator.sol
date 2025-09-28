@@ -182,6 +182,10 @@ contract MyToken is ERC20 {
     }
 
     //Add custom features
+    function burn(uint256 amount) public {
+        //allow token holders to burn their tokens
+        _burn(msg.sender, amount);
+    }
 }
 
 //Adding a fee to tokens transfer
