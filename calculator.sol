@@ -182,7 +182,7 @@ contract MyToken is ERC20 {
     }
 }
 
-//Adding custom futures here
+//Adding a fee to tokens transfer
 //inheritence lets you customize standard behaviour :
 
 contract FeeToken is ERC20 {}
