@@ -180,6 +180,8 @@ contract MyToken is ERC20 {
         //Mint 1 million tokens to the deployer
         _mint(msg.sender, 1000000 * 10 ** 18);
     }
+
+    //Add custom features
 }
 
 //Adding a fee to tokens transfer
@@ -193,4 +195,6 @@ contract FeeToken is ERC20 {
         //Mint 1 million tokens to the deployer
         _mint(msg.sender, 1000000 * 10 ** 18);
     }
+
+    //override the transfer function to add  a 1% fee thngg
 }
