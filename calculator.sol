@@ -180,7 +180,9 @@ contract MyToken is ERC20 {
         //Mint 1 million tokens to the deployer
         _mint(msg.sender, 1000000 * 10 ** 18);
     }
-
-    //Adding custom futures here
-    //inheritence lets you customize standard behaviour :
 }
+
+//Adding custom futures here
+//inheritence lets you customize standard behaviour :
+
+contract FeeToken is ERC20 {}
