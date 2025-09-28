@@ -189,7 +189,7 @@ contract MyToken is ERC20 {
 }
 
 //Adding a fee to tokens transfer
-//inheritence lets you customize standard behaviour :
+//Inheritence lets you customize standard behaviour :
 
 contract FeeToken is ERC20 {
     address public feeCollector;
@@ -200,5 +200,5 @@ contract FeeToken is ERC20 {
         _mint(msg.sender, 1000000 * 10 ** 18);
     }
 
-    //override the transfer function to add  a 1% fee thngg
+    //Override the transfer function to add  a 1% fee
 }
