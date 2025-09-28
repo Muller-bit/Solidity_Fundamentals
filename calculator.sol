@@ -182,4 +182,5 @@ contract MyToken is ERC20 {
     }
 
     //Adding custom futures here
+    //inheritence lets you customize standard behaviour :
 }
