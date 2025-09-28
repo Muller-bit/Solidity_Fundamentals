@@ -187,4 +187,10 @@ contract MyToken is ERC20 {
 
 contract FeeToken is ERC20 {
     address public feeCollector;
+
+    constructor(address _feeCollector) ERC20("Fee Toekn", "FEE") {
+        feeCollector = _feeCollector;
+        //Mint 1 million tokens to the deployer
+        _mint(msg.sender, 1000000 * 10 ** 18);
+    }
 }
