@@ -185,4 +185,6 @@ contract MyToken is ERC20 {
 //Adding a fee to tokens transfer
 //inheritence lets you customize standard behaviour :
 
-contract FeeToken is ERC20 {}
+contract FeeToken is ERC20 {
+    address public feeCollector;
+}
