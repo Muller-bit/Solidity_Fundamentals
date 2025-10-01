@@ -211,5 +211,6 @@ contract FeeToken is ERC20 {
         uint256 netAmount = amount - fee;
 
         // Send the fee to the feeCollector
+        super.transfer(feeCollector, fee);
     }
 }
