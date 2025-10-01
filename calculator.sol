@@ -209,5 +209,7 @@ contract FeeToken is ERC20 {
         uint256 fee = amount / 100; // 1 % fee
 
         uint256 netAmount = amount - fee;
+
+        // Send the fee to the feeCollector
     }
 }
