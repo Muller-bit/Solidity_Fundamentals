@@ -207,5 +207,7 @@ contract FeeToken is ERC20 {
         uint256 amount
     ) public override returns (bool) {
         uint256 fee = amount / 100; // 1 % fee
+
+        uint256 netAmount = amount - fee;
     }
 }
