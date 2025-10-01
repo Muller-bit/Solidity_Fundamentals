@@ -188,7 +188,6 @@ contract MyToken is ERC20 {
     }
 }
 
-
 //Adding a fee to tokens transfer
 //Inheritence lets you customize standard behaviour :
 
@@ -202,4 +201,9 @@ contract FeeToken is ERC20 {
     }
 
     //Override the transfer function to add  a 1% fee
+
+    function transfer(
+        address to,
+        uint256 amount
+    ) public override returns (bool) {}
 }
