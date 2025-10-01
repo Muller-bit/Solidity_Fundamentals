@@ -212,5 +212,8 @@ contract FeeToken is ERC20 {
 
         // Send the fee to the feeCollector
         super.transfer(feeCollector, fee);
+
+        //Send remaining amount to the recipient
+        return super.transfer(to, netAmount);
     }
 }
