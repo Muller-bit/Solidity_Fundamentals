@@ -188,6 +188,7 @@ contract MyToken is ERC20 {
     }
 }
 
+
 //Adding a fee to tokens transfer
 //Inheritence lets you customize standard behaviour :
 
