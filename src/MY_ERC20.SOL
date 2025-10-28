@@ -1,0 +1,144 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+//import and inherite the AccessControl and ERC20 
+/*
+ Minimal local ERC20 implementation to avoid external imports in simple examples.
+ This provides the basic ERC20 functions used by this contract: constructor, _mint,
+ totalSupply, balanceOf, transfer, approve, allowance, and transferFrom.
+ Not a full OpenZeppelin replacement — only intended for educational/demo use.
+*/
+contract ERC20 {
+    string public name;
+    string public symbol;
+    uint8 public constant decimals = 18;
+
+    uint256 private _totalSupply;
+    mapping(address => uint256) private _balances;
+    mapping(address => mapping(address => uint256)) private _allowances;
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+
+    constructor(string memory name_, string memory symbol_) {
+        name = name_;
+        symbol = symbol_;
+    }
+
+    function totalSupply() public view returns (uint256) {
+        return _totalSupply;
+    }
+
+    function balanceOf(address account) public view returns (uint256) {
+        return _balances[account];
+    }
+
+    function transfer(address to, uint256 amount) public virtual returns (bool) {
+        address owner = msg.sender;
+        _transfer(owner, to, amount);
+        return true;
+    }
+
+    function allowance(address owner, address spender) public view returns (uint256) {
+        return _allowances[owner][spender];
+    }
+
+    function approve(address spender, uint256 amount) public returns (bool) {
+        _approve(msg.sender, spender, amount);
+        return true;
+    }
+
+    function transferFrom(address from, address to, uint256 amount) public returns (bool) {
+        address spender = msg.sender;
+        _spendAllowance(from, spender, amount);
+        _transfer(from, to, amount);
+        return true;
+    }
+
+    function _transfer(address from, address to, uint256 amount) internal {
+        require(from != address(0), "ERC20: transfer from the zero address");
+        require(to != address(0), "ERC20: transfer to the zero address");
+
+        uint256 fromBalance = _balances[from];
+        require(fromBalance >= amount, "ERC20: transfer amount exceeds balance");
+        _balances[from] = fromBalance - amount;
+        _balances[to] += amount;
+
+        emit Transfer(from, to, amount);
+    }
+
+    function _mint(address account, uint256 amount) internal virtual {
+        require(account != address(0), "ERC20: mint to the zero address");
+        _totalSupply += amount;
+        _balances[account] += amount;
+        emit Transfer(address(0), account, amount);
+    }
+
+    function _approve(address owner, address spender, uint256 amount) internal {
+        require(owner != address(0), "ERC20: approve from the zero address");
+        require(spender != address(0), "ERC20: approve to the zero address");
+
+        _allowances[owner][spender] = amount;
+        emit Approval(owner, spender, amount);
+    }
+
+    function _spendAllowance(address owner, address spender, uint256 amount) internal {
+        uint256 currentAllowance = _allowances[owner][spender];
+        if (currentAllowance != type(uint256).max) {
+            require(currentAllowance >= amount, "ERC20: insufficient allowance");
+            _approve(owner, spender, currentAllowance - amount);
+        }
+    }
+}
+
+
+
+// Minimal AccessControl replacement to avoid external imports in simple examples.
+// Note: this is a deliberately small subset of OpenZeppelin's AccessControl functionality
+// providing only what's used by this contract: role storage, hasRole, onlyRole modifier
+// and an internal _grantRole function.
+abstract contract AccessControl {
+    // role => account => bool
+    mapping(bytes32 => mapping(address => bool)) private _roles;
+
+    // The default admin role is represented by 0x00
+    bytes32 public constant DEFAULT_ADMIN_ROLE = 0x00;
+
+    modifier onlyRole(bytes32 role) {
+        require(hasRole(role, msg.sender), "AccessControl: account is missing role");
+        _;
+    }
+
+    function hasRole(bytes32 role, address account) public view returns (bool) {
+        return _roles[role][account];
+    }
+
+    function _grantRole(bytes32 role, address account) internal virtual {
+        _roles[role][account] = true;
+    }
+}
+
+
+contract MyERC20 is ERC20, AccessControl {
+
+    // create a public variable called MINTER_ROLE and set it to keccak256("MINTER_ROLE")
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE"); //assigning role
+
+    // create a constructor that sets the name and symbol of the token to "My Cyfrin CLF Token" and "CLF" respectively
+    
+        constructor() ERC20("My Cyfrin CLF Token", "CLF") {
+
+        // grant the DEFAULT_ADMIN_ROLE and MINTER_ROLE to the deployer of the contract
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _grantRole(MINTER_ROLE, msg.sender);    
+    }
+    
+
+    function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
+        _mint(to, amount);
+    }
+
+   
+}
+  
+
